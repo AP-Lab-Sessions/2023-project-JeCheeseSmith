@@ -1,0 +1,4 @@
+<map id="em::Wall" name="em::Wall">
+<area shape="rect" id="node1" title=" " alt="" coords="30,80,110,107"/>
+<area shape="rect" id="node2" href="$classem_1_1EntityModel.html" title=" " alt="" coords="5,5,135,32"/>
+</map>

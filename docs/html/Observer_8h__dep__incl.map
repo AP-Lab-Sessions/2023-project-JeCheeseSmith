@@ -1,0 +1,21 @@
+<map id="logic/Observer.h" name="logic/Observer.h">
+<area shape="rect" id="node1" title=" " alt="" coords="218,5,346,32"/>
+<area shape="rect" id="node2" href="$EntityModel_8h.html" title=" " alt="" coords="209,80,356,107"/>
+<area shape="rect" id="node16" href="$Score_8h.html" title=" " alt="" coords="12,162,118,189"/>
+<area shape="rect" id="node19" href="$EntityView_8h.html" title=" " alt="" coords="574,155,726,196"/>
+<area shape="rect" id="node3" href="$AbstractFactory_8h.html" title=" " alt="" coords="380,162,550,189"/>
+<area shape="rect" id="node4" href="$World_8h.html" title=" " alt="" coords="220,251,326,278"/>
+<area shape="rect" id="node18" href="$EntityModel_8cpp.html" title=" " alt="" coords="142,162,305,189"/>
+<area shape="rect" id="node14" href="$ViewFactory_8h.html" title=" " alt="" coords="389,244,541,285"/>
+<area shape="rect" id="node5" href="$World_8cpp.html" title=" " alt="" coords="37,341,160,367"/>
+<area shape="rect" id="node6" href="$States_8h.html" title=" " alt="" coords="139,423,306,464"/>
+<area shape="rect" id="node11" href="$Camera_8h.html" title=" " alt="" coords="285,333,437,375"/>
+<area shape="rect" id="node7" href="$Game_8h.html" title=" " alt="" coords="44,512,211,553"/>
+<area shape="rect" id="node10" href="$States_8cpp.html" title=" " alt="" coords="235,512,402,553"/>
+<area shape="rect" id="node8" href="$main_8cpp.html" title=" " alt="" coords="12,609,94,635"/>
+<area shape="rect" id="node9" href="$Game_8cpp.html" title=" " alt="" coords="119,601,286,643"/>
+<area shape="rect" id="node12" href="$Camera_8cpp.html" title=" " alt="" coords="389,423,541,464"/>
+<area shape="rect" id="node13" href="$EntityView_8cpp.html" title=" " alt="" coords="594,423,746,464"/>
+<area shape="rect" id="node15" href="$ViewFactory_8cpp.html" title=" " alt="" coords="461,333,613,375"/>
+<area shape="rect" id="node17" href="$Score_8cpp.html" title=" " alt="" coords="37,251,157,278"/>
+</map>

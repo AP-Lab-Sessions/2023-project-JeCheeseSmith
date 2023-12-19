@@ -1,0 +1,7 @@
+<map id="view::Mob" name="view::Mob">
+<area shape="rect" id="node1" title=" " alt="" coords="75,155,165,181"/>
+<area shape="rect" id="node4" href="$classview_1_1Ghost.html" title=" " alt="" coords="5,229,104,256"/>
+<area shape="rect" id="node5" href="$classview_1_1Pacman.html" title=" " alt="" coords="129,229,242,256"/>
+<area shape="rect" id="node2" href="$classview_1_1EntityView.html" title=" " alt="" coords="55,80,185,107"/>
+<area shape="rect" id="node3" href="$classobs_1_1Observer.html" title=" " alt="" coords="64,5,176,32"/>
+</map>

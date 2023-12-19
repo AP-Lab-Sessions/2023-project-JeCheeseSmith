@@ -1,0 +1,10 @@
+<map id="view::EntityView" name="view::EntityView">
+<area shape="rect" id="node1" title=" " alt="" coords="157,80,288,107"/>
+<area shape="rect" id="node3" href="$classview_1_1Coin.html" title=" " alt="" coords="5,155,96,181"/>
+<area shape="rect" id="node4" href="$classview_1_1Fruit.html" title=" " alt="" coords="120,155,211,181"/>
+<area shape="rect" id="node5" href="$classview_1_1Mob.html" title=" " alt="" coords="235,155,325,181"/>
+<area shape="rect" id="node8" href="$classview_1_1Wall.html" title=" " alt="" coords="349,155,440,181"/>
+<area shape="rect" id="node2" href="$classobs_1_1Observer.html" title=" " alt="" coords="167,5,279,32"/>
+<area shape="rect" id="node6" href="$classview_1_1Ghost.html" title=" " alt="" coords="165,229,264,256"/>
+<area shape="rect" id="node7" href="$classview_1_1Pacman.html" title=" " alt="" coords="289,229,402,256"/>
+</map>
