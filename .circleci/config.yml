@@ -17,5 +17,5 @@ jobs:
       - run: mkdir -p build
       - run: cd build && cmake ..
       - run: cd build && make
-      - run: cd build && cp pacman ..
+      - run: cd build && cp apman ..
       #- run: ./pacman
