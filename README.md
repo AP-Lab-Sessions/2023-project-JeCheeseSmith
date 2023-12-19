@@ -24,7 +24,7 @@
 
 > I tried to write my whole project in a way that the code would not only be lowly coupled & highly cohesive,
 > but also be easily extendable.
-> Furthermore, I aimed to write comprehensive code with proper documentation.>
+> Furthermore, I aimed to write comprehensive code with proper documentation.
 
 I value structure in my project, as well as directory-wise as code-wise. 
 The used namespaces are specifically created on functionality, domain or design patterns. 
