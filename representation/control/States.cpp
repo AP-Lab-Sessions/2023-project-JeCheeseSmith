@@ -65,7 +65,7 @@ namespace s {
         StateManager::difficulty = diff;
     }
 
-    State::State(StateManager &manager): manager(manager) {}
+    State::State(const std::shared_ptr<StateManager>& manager): manager(manager) {}
 
     void State::loadScreen(const std::string &path,bool clear) {
         sf::Texture bg; //Load texture
@@ -87,7 +87,7 @@ namespace s {
 
     void State::loadText(const std::string &str, bool center) {
         sf::Text text;
-        text.setFont(manager.getFont());
+        text.setFont(manager->getFont());
         text.setString(str);
         text.setCharacterSize( std::floor(s::Singleton<view::View>::get()->getSize().y / 44));
         text.setFillColor(sf::Color::Yellow);
@@ -101,14 +101,14 @@ namespace s {
         s::Singleton<view::View>::get()->draw(text);
     }
 
-    MenuState::MenuState(StateManager &manager): State(manager) {
+    MenuState::MenuState(const std::shared_ptr<StateManager>& manager): State(manager) {
         MenuState::update();
     }
 
     void MenuState::pressed(sf::Keyboard::Key &curr)  {
         if(curr==sf::Keyboard::Key::Enter){
             s::Singleton<obs::Score>::get()->setScore(obs::maxScore); //Reset the value
-            manager.push(std::make_unique<s::LevelState>(manager)); //Push back
+            manager->push(std::make_unique<s::LevelState>(manager)); //Push back
         }else{
             update();
         }
@@ -130,8 +130,8 @@ namespace s {
         s::Singleton<view::View>::get()->display(); //Display newly drawn items
     }
 
-    LevelState::LevelState(StateManager &manager) : State(
-            manager), world(fact::ViewFactory(),manager.getDifficulty(),manager.getHearts()) {
+    LevelState::LevelState(const std::shared_ptr<StateManager>& manager) : State(
+            manager), world(fact::ViewFactory(),manager->getDifficulty(),manager->getHearts()) {
         s::Singleton<view::View>::get()->clear(); //Clear current stuff
 
         //Create World in view
@@ -152,7 +152,7 @@ namespace s {
         switch (curr) {
             case sf::Keyboard::Key::Escape: {
                 world.setPaused(true);
-                manager.push(std::make_unique<s::PausedState>(manager)); //Push back Paused State
+                manager->push(std::make_unique<s::PausedState>(manager)); //Push back Paused State
                 return; //Don't go further
             }
             case sf::Keyboard::Key::Left:
@@ -175,11 +175,11 @@ namespace s {
 
         if(world.gameOver()) {
             world.setPaused(true); //Pause the game so the score will be preserved
-            manager.push(std::make_unique<s::GameOverState>(manager)); //Push back
+            manager->push(std::make_unique<s::GameOverState>(manager)); //Push back
         }else if (world.isCompleted()) {
             world.setPaused(true); //Pause the game so the score will be preserved
-            manager.setHearts(world.getHearts());
-            manager.push(std::make_unique<s::VictoryState>(manager)); //Push back
+            manager->setHearts(world.getHearts());
+            manager->push(std::make_unique<s::VictoryState>(manager)); //Push back
         }
     }
 
@@ -187,7 +187,7 @@ namespace s {
         world.update();
     }
 
-    PausedState::PausedState(StateManager &manager)
+    PausedState::PausedState(const std::shared_ptr<StateManager>& manager)
             : State(manager) {
         PausedState::update();
     }
@@ -195,10 +195,10 @@ namespace s {
     void PausedState::pressed(sf::Keyboard::Key &curr)  {
         switch(curr){
             case sf::Keyboard::Key::Enter: //Pop Itself if a click or enter is registered to continue
-                manager.pop();
+                manager->pop();
                 break;
             case sf::Keyboard::Key::BackSpace:
-                manager.pop(2); //Pop the level and itsself
+                manager->pop(2); //Pop the level and itsself
                 break;
             default:
                 break;
@@ -210,15 +210,15 @@ namespace s {
         loadText("Press Esc to go to Menu\n Press any other key to return to game"); //Display some text
     }
 
-    VictoryState::VictoryState(StateManager &manager)
+    VictoryState::VictoryState(const std::shared_ptr<StateManager>& manager)
             : State(manager) {
         VictoryState::update();
     }
 
     void VictoryState::pressed(sf::Keyboard::Key &curr)  {
         if(curr == sf::Keyboard::Key::BackSpace){ //If we want to continue
-            manager.incDifficulty(); //Make the game a little harder
-            manager.replace( std::make_unique<s::LevelState>(manager) ); //Push back, pop 2 times (level & this) //Create new lvl state
+            manager->incDifficulty(); //Make the game a little harder
+            manager->replace( std::make_unique<s::LevelState>(manager) ); //Push back, pop 2 times (level & this) //Create new lvl state
         }
     }
 
@@ -226,7 +226,7 @@ namespace s {
         loadScreen(victoryPNG); //Window.load Victory Menu
     }
 
-    GameOverState::GameOverState(StateManager &manager)
+    GameOverState::GameOverState(const std::shared_ptr<StateManager>& manager)
             : State(manager) {
         s::Singleton<obs::Score>::get()->exporter(); //Score may only be exported on game Ending
         loadScreen(gameOverJPG); //Load GameOver Screen
@@ -234,9 +234,9 @@ namespace s {
 
     void GameOverState::pressed(sf::Keyboard::Key &curr)  {
         if(curr == sf::Keyboard::Key::Escape){ //If we want to leave/continue
-            manager.setHearts(3); //Reset lives
-            manager.setDifficulty(0); //Reset diff
-            manager.pop(2); //Pop the failed level & itself
+            manager->setHearts(3); //Reset lives
+            manager->setDifficulty(0); //Reset diff
+            manager->pop(2); //Pop the failed level & itself
             loadScreen(menuPNG); //Load Menu
         }
     }

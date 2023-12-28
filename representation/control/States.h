@@ -21,6 +21,9 @@
  */
 namespace s {
 
+    /**
+     * Predefine file locations for easy change and acces
+     */
     static const std::string spritesPNG{"representation/data/Sprites.png"};
     static const std::string victoryPNG{"representation/data/Victory.png"};
     static const std::string pausedPNG{"representation/data/Paused.png"};
@@ -28,7 +31,10 @@ namespace s {
     static const std::string gameOverJPG{"representation/data/GameOver.jpg"};
     static const std::string fontTTF{"representation/data/BlueStyle.ttf"};
 
-    class State; //Forward Declaration
+    /**
+     * Forward Declaration
+     */
+    class State;
 
     /**
      * State manager or context; States Design Pattern
@@ -141,7 +147,7 @@ namespace s {
         /**
          * Holds a reference to the StateManager
          */
-        StateManager& manager;
+        std::shared_ptr<StateManager> manager;
 
         /**
          * Load  a certain .png in the background
@@ -162,7 +168,7 @@ namespace s {
          * @param manager , ptr to the StateManager class to acces related data
          * @param window , ptr to manage the window contents
          */
-        explicit State(StateManager &manager);
+        explicit State(const std::shared_ptr<StateManager> &manager);
 
         /**
          * Pure Virtual function to delegate pressed input
@@ -191,7 +197,7 @@ namespace s {
          * @param manager
          * @param window
          */
-        explicit MenuState(StateManager &manager);
+        explicit MenuState(const std::shared_ptr<StateManager>& manager);
 
         /**
          * Function to handle input
@@ -224,7 +230,7 @@ namespace s {
          * @param manager , StateManager
          * @param window , Window to draw in
          */
-        explicit LevelState(StateManager &manager);
+        explicit LevelState(const std::shared_ptr<StateManager>& manager);
 
         /**
          * Function to handle input
@@ -252,7 +258,7 @@ namespace s {
          * @param manager
          * @param window
          */
-        explicit PausedState(StateManager &manager);
+        explicit PausedState(const std::shared_ptr<StateManager>& manager);
 
         /**
          * Function to handle input
@@ -280,7 +286,7 @@ namespace s {
          * @param manager
          * @param window
          */
-        explicit VictoryState(StateManager &manager);
+        explicit VictoryState(const std::shared_ptr<StateManager>& manager);
 
         /**
          * Function to handle input
@@ -308,7 +314,7 @@ namespace s {
          * @param manager
          * @param window
          */
-        explicit GameOverState(StateManager &manager);
+        explicit GameOverState(const std::shared_ptr<StateManager>& manager);
 
         /**
          * Function to handle input

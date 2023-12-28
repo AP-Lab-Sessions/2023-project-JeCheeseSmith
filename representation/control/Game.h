@@ -27,7 +27,7 @@ namespace play {
         /**
          * State manager
          */
-        s::StateManager manager;
+        std::shared_ptr<s::StateManager> manager;
 
         /**
         * Checks if all the required files are present
@@ -54,7 +54,7 @@ namespace play {
         /**
          * Simple Destructor
          */
-        virtual ~Game() = default;
+        virtual ~Game();
     };
 }
 
