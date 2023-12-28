@@ -69,10 +69,13 @@ $(function() {
 <div class="contents">
 <div class="textblock"><blockquote class="doxtable">
 <p>Variant on the popular game Pacman. A project for the course Advanced Programming (INFORMAT 1500WETAPR) </p><blockquote class="doxtable">
-<p>By Kars van Velzen </p>
+<p>By Kars van Velzen, s20223956 </p>
 </blockquote>
 </blockquote>
 <h2><a class="anchor" id="autotoc_md1"></a>
+How to start?</h2>
+<p>Run <a class="el" href="main_8cpp.html">main.cpp</a> Enjoy =)</p>
+<h2><a class="anchor" id="autotoc_md2"></a>
 Functionalities:</h2>
 <ul>
 <li>[X] Game startup &amp; Initialization</li>
@@ -84,17 +87,17 @@ Functionalities:</h2>
 <li>[X] Multiple Lives and Game Over</li>
 <li>[x] Visuals and Aesthetics</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<h2><a class="anchor" id="autotoc_md3"></a>
 Code:</h2>
 <ul>
 <li>[X] Use of classes: Game, Stopwatch, World, Camera, Score, Random</li>
 <li>[X] Use of design patterns: Model-View-Controller (MVC), Observer, Abstract Factory, Singleton, State</li>
 <li>[X] Use of namespaces, exception handling, keywords, virtual destructors, initialized primitives, no dynamic casts, polymorphism, templates clang-format, documentation, smart pointers</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md4"></a>
 Design Choices Overview</h1>
 <blockquote class="doxtable">
-<p>I tried to write my whole project in a way that the code would not only be lowly coupled &amp; highly cohesive, but also be easily extendable. Furthermore, I aimed to write comprehensive code with proper documentation.&gt; </p>
+<p>I tried to write my whole project in a way that the code would not only be lowly coupled &amp; highly cohesive, but also be easily extendable. Furthermore, I aimed to write comprehensive code with proper documentation. </p>
 </blockquote>
 <p>I value structure in my project, as well as directory-wise as code-wise. The used namespaces are specifically created on functionality, domain or design patterns. Some namespaces may only contain one class, this is done for readability &amp; extendability.</p>
 <p><b>MODEL</b>: The model is composed of the em- (Entity Model) namespace and for a small part of the w- (World) domain. The entities hold all data, however, the entities should be grouped somewhere together. I decided to keep them in the World class, since it also acts as the controller. As a result, the data can easily be modified. This idea is in line with the assignment, as it states that the World is an orchestrator and that the model should hold methodes to manipulate the data.</p>
@@ -104,13 +107,13 @@ Design Choices Overview</h1>
 <p><b>WORLD:</b> I wanted to find an easier way of implementing collisions, since pacman is not such a high-performance-end game. I combined storing the EntityModels into a Board together with this idea. Whiles matching the Entity coordinate with an Index on the board, collisions came down to a simple comparison. <br  />
 </p>
 <p><b>STATES:</b> I tried to delegate the responsibility of handling input towards the States, making the Game-class only responsible for instantiating the Game, as the name suggests.</p>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Generic Singleton</h2>
 <p>Whilst working out my project, I noticed the advantages of a Singleton. Thus, I decided to implement the Camera and View (Window) also as a Singleton. Now I used five times the same pattern, which made me wonder if I could use templates for it, resulting in a generic Singleton using class templates. (See <a class="el" href="Singleton_8h.html">Singleton.h</a>) However, I could've opted to implement the State manager as a Singleton. I decided not to, since I wanted to make use of references &amp; smart pointers too. I took the critics of a Singleton being an anti-pattern in mind.</p>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 A note on Inheritance</h2>
 <p>I made the Observer Class an abstract base class. Furthermore, I minimized the use of extra functions and focused on the correct override behavior, everywhere inheritance was used (EntityView, EntityModel, Observer, ...).</p>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 Minor Advantages</h2>
 <ul>
 <li>By using a struct for my coordinates, I simplified working with it.</li>
@@ -118,7 +121,7 @@ Minor Advantages</h2>
 <li>I tried writing my documentation as complete as possible and generated it with Doxygen. (See docs/html/*)</li>
 <li>No use of explicit casting</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 License</h2>
 <p>The project is written and provided by Kars van Velzen. The SFM Library was used (and therefor not written by Kars van Velzen) which licenses can be found on: <a href="https://github.com/SFML/SFML">https://github.com/SFML/SFML</a>. 3 Files with minor modifications have been used from the course: Project Software Engineering (INFORMAT 1001WETISE), given by prof. Serge Demeyer. Their licenses can be found on: <a href="https://github.com/sergedemeyer/TicTacToe_Git">https://github.com/sergedemeyer/TicTacToe_Git</a> Used Files: <a class="el" href="DesignByContract_8h.html">DesignByContract.h</a> , <a class="el" href="helper_8h.html">helper.h</a> , <a class="el" href="helper_8cpp.html">helper.cpp</a>. These files were provided by prof. Serge Demeyer and modified by Kars van Velzen. </p>
 </div></div><!-- contents -->

@@ -47,7 +47,7 @@ namespace play {
     public:
         /**
          * Constructor , instantiates the class and verify consistency
-         * \REQUIRE(consistent(), "Program is inconsistent, abort");
+         * REQUIRE(consistent(), "Program is inconsistent, abort");
          */
         Game();
 

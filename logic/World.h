@@ -52,6 +52,7 @@ namespace w{
          * Construct the world and initiates its Entities
          * @param factory used to instantiate the entities
          * @param difficulty
+         * @param hearts
          */
         World(const fact::AbstractFactory &factory, long difficulty, short hearts);
 
@@ -140,6 +141,7 @@ namespace w{
         /**
          * Helper Function to minimise redundant code
          * @param factory used to create entities
+         * @param offset used to determine upper of down part of the maze
          */
         void addWalls(const fact::AbstractFactory &factory, bool offset);
 

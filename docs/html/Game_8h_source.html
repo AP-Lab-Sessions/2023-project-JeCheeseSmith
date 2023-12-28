@@ -91,7 +91,7 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classplay_1_1Game.html">   25</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classplay_1_1Game.html">Game</a> {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classplay_1_1Game.html#a91cc09b0dfe942c98035752722e8e819">   30</a></span>&#160;        <a class="code" href="classs_1_1StateManager.html">s::StateManager</a> <a class="code" href="classplay_1_1Game.html#a91cc09b0dfe942c98035752722e8e819">manager</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classplay_1_1Game.html#aec9f6b070cdf3e8d8cacc2043ab4607e">   30</a></span>&#160;        std::shared_ptr&lt;s::StateManager&gt; <a class="code" href="classplay_1_1Game.html#aec9f6b070cdf3e8d8cacc2043ab4607e">manager</a>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        [[nodiscard]] <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classplay_1_1Game.html#a970dbaedbcf6590e63528251ea0726c3">consistent</a>() ;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
@@ -102,21 +102,20 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="classplay_1_1Game.html#a9725fd4d007696e1f399c20ac8bd2efb">Game</a>();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classplay_1_1Game.html#aaf88443a28ae41298cc93e9287eed71c">~Game</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classplay_1_1Game.html#a5a8b67d7eadc2ee9dbc663fa71654e8f">~Game</a>();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif //PACMAN_GAME_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassplay_1_1Game_html_a5a8b67d7eadc2ee9dbc663fa71654e8f"><div class="ttname"><a href="classplay_1_1Game.html#a5a8b67d7eadc2ee9dbc663fa71654e8f">play::Game::~Game</a></div><div class="ttdeci">virtual ~Game()</div><div class="ttdef"><b>Definition:</b> Game.cpp:63</div></div>
 <div class="ttc" id="aclassplay_1_1Game_html_a970dbaedbcf6590e63528251ea0726c3"><div class="ttname"><a href="classplay_1_1Game.html#a970dbaedbcf6590e63528251ea0726c3">play::Game::consistent</a></div><div class="ttdeci">static bool consistent()</div><div class="ttdef"><b>Definition:</b> Game.cpp:8</div></div>
-<div class="ttc" id="aclassplay_1_1Game_html_a91cc09b0dfe942c98035752722e8e819"><div class="ttname"><a href="classplay_1_1Game.html#a91cc09b0dfe942c98035752722e8e819">play::Game::manager</a></div><div class="ttdeci">s::StateManager manager</div><div class="ttdef"><b>Definition:</b> Game.h:30</div></div>
 <div class="ttc" id="aStates_8h_html"><div class="ttname"><a href="States_8h.html">States.h</a></div></div>
-<div class="ttc" id="aclasss_1_1StateManager_html"><div class="ttname"><a href="classs_1_1StateManager.html">s::StateManager</a></div><div class="ttdef"><b>Definition:</b> States.h:28</div></div>
-<div class="ttc" id="aclassplay_1_1Game_html_a33c48c6bcc565878b20af001f8cd6f3d"><div class="ttname"><a href="classplay_1_1Game.html#a33c48c6bcc565878b20af001f8cd6f3d">play::Game::handleEvents</a></div><div class="ttdeci">void handleEvents()</div><div class="ttdef"><b>Definition:</b> Game.cpp:21</div></div>
+<div class="ttc" id="aclassplay_1_1Game_html_a33c48c6bcc565878b20af001f8cd6f3d"><div class="ttname"><a href="classplay_1_1Game.html#a33c48c6bcc565878b20af001f8cd6f3d">play::Game::handleEvents</a></div><div class="ttdeci">void handleEvents()</div><div class="ttdef"><b>Definition:</b> Game.cpp:22</div></div>
+<div class="ttc" id="aclassplay_1_1Game_html_aec9f6b070cdf3e8d8cacc2043ab4607e"><div class="ttname"><a href="classplay_1_1Game.html#aec9f6b070cdf3e8d8cacc2043ab4607e">play::Game::manager</a></div><div class="ttdeci">std::shared_ptr&lt; s::StateManager &gt; manager</div><div class="ttdef"><b>Definition:</b> Game.h:30</div></div>
 <div class="ttc" id="aclassplay_1_1Game_html"><div class="ttname"><a href="classplay_1_1Game.html">play::Game</a></div><div class="ttdef"><b>Definition:</b> Game.h:25</div></div>
 <div class="ttc" id="anamespaceplay_html"><div class="ttname"><a href="namespaceplay.html">play</a></div><div class="ttdef"><b>Definition:</b> Game.cpp:7</div></div>
-<div class="ttc" id="aclassplay_1_1Game_html_a748fc8adc6a0571df732bed61d357e67"><div class="ttname"><a href="classplay_1_1Game.html#a748fc8adc6a0571df732bed61d357e67">play::Game::gameLoop</a></div><div class="ttdeci">void gameLoop()</div><div class="ttdef"><b>Definition:</b> Game.cpp:54</div></div>
-<div class="ttc" id="aclassplay_1_1Game_html_aaf88443a28ae41298cc93e9287eed71c"><div class="ttname"><a href="classplay_1_1Game.html#aaf88443a28ae41298cc93e9287eed71c">play::Game::~Game</a></div><div class="ttdeci">virtual ~Game()=default</div></div>
+<div class="ttc" id="aclassplay_1_1Game_html_a748fc8adc6a0571df732bed61d357e67"><div class="ttname"><a href="classplay_1_1Game.html#a748fc8adc6a0571df732bed61d357e67">play::Game::gameLoop</a></div><div class="ttdeci">void gameLoop()</div><div class="ttdef"><b>Definition:</b> Game.cpp:55</div></div>
 <div class="ttc" id="aclassplay_1_1Game_html_a9725fd4d007696e1f399c20ac8bd2efb"><div class="ttname"><a href="classplay_1_1Game.html#a9725fd4d007696e1f399c20ac8bd2efb">play::Game::Game</a></div><div class="ttdeci">Game()</div><div class="ttdef"><b>Definition:</b> Game.cpp:14</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

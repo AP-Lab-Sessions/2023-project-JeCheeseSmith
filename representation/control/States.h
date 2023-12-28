@@ -91,6 +91,7 @@ namespace s {
 
         /**
          * Remove a state from the Stack
+         * @param times
          */
         void pop(int times = 1);
 
@@ -117,7 +118,7 @@ namespace s {
 
         /**
          * Simple setter
-         * @param curr
+         * @param Curr
          */
         void setCurr(sf::Keyboard::Key Curr);
 
@@ -129,7 +130,7 @@ namespace s {
 
         /**
          * Simple setter
-         * @param difficulty
+         * @param diff
          */
         void setDifficulty(long diff);
 
@@ -152,21 +153,21 @@ namespace s {
         /**
          * Load  a certain .png in the background
          * @param path
+         * @param clear
          */
         static void loadScreen(const std::string &path, bool clear=true);
 
         /**
          * Load a vector of strings onto the screen
-         * @param data
-         * @param center , define if the text should be centered
+         * @param str
+         * @param center define if the text should be centered
          */
         void loadText(const std::string &str, bool center=false);
 
     public:
         /**
          * Simple constructor
-         * @param manager , ptr to the StateManager class to acces related data
-         * @param window , ptr to manage the window contents
+         * @param manager ptr to the StateManager class to acces related data
          */
         explicit State(const std::shared_ptr<StateManager> &manager);
 
@@ -195,7 +196,6 @@ namespace s {
         /**
          * Constructor to setup Menu Loading Screen
          * @param manager
-         * @param window
          */
         explicit MenuState(const std::shared_ptr<StateManager>& manager);
 
@@ -227,8 +227,7 @@ namespace s {
     public:
         /**
          * Constructor to setup everything
-         * @param manager , StateManager
-         * @param window , Window to draw in
+         * @param manager StateManager
          */
         explicit LevelState(const std::shared_ptr<StateManager>& manager);
 
@@ -256,7 +255,6 @@ namespace s {
         /**
          * Constructor to setup the view
          * @param manager
-         * @param window
          */
         explicit PausedState(const std::shared_ptr<StateManager>& manager);
 
@@ -284,7 +282,6 @@ namespace s {
         /**
          * Constructor to setup the view
          * @param manager
-         * @param window
          */
         explicit VictoryState(const std::shared_ptr<StateManager>& manager);
 
@@ -312,7 +309,6 @@ namespace s {
         /**
          * Constructor
          * @param manager
-         * @param window
          */
         explicit GameOverState(const std::shared_ptr<StateManager>& manager);
 

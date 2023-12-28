@@ -11,5 +11,6 @@ var searchData=
   ['fileisempty_56',['FileIsEmpty',['../namespacesos.html#ac2cc742b419e3dedfdf731aa20a34029',1,'sos']]],
   ['fillboard_57',['fillBoard',['../classw_1_1World.html#ae181b7f6e57ac8fa6c4dfd2824d58670',1,'w::World']]],
   ['font_58',['font',['../classs_1_1StateManager.html#ad0927b35f61501b52d6b022c3ec71115',1,'s::StateManager']]],
-  ['fruit_59',['Fruit',['../classem_1_1Fruit.html',1,'em::Fruit'],['../classview_1_1Fruit.html',1,'view::Fruit'],['../classem_1_1Fruit.html#af38ec05eb48fed1d8e0d9448a41f64d5',1,'em::Fruit::Fruit()'],['../classview_1_1Fruit.html#a0d2a3380f75dc228e30d63b992374a6d',1,'view::Fruit::Fruit()']]]
+  ['fontttf_59',['fontTTF',['../namespaces.html#a6c26f8456dd4190d1b61bb556659f037',1,'s']]],
+  ['fruit_60',['Fruit',['../classem_1_1Fruit.html',1,'em::Fruit'],['../classview_1_1Fruit.html',1,'view::Fruit'],['../classem_1_1Fruit.html#af38ec05eb48fed1d8e0d9448a41f64d5',1,'em::Fruit::Fruit()'],['../classview_1_1Fruit.html#a0d2a3380f75dc228e30d63b992374a6d',1,'view::Fruit::Fruit()']]]
 ];

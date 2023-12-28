@@ -94,6 +94,7 @@ namespace em {
         /**
          * Simple constructor
          * @param power
+         * @param pos
          */
         explicit EntityModel(const short &power,const em::Coordinate &pos);
 
@@ -110,7 +111,7 @@ namespace em {
 
          /**
          * "Move" the Entity towards a new location // "Setter"
-         * @param r
+         * @param p
          */
          virtual void move(const em::Coordinate &p);
 
