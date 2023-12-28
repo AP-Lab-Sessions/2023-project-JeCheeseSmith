@@ -6,9 +6,9 @@
 
 namespace play {
     bool Game::consistent() {
-        return sos::FileExists("representation/data/Sprites.png") && sos::FileExists("representation/data/Menu.png")
-               && sos::FileExists("representation/data/Paused.png") && sos::FileExists("representation/data/GameOver.jpg")
-               && sos::FileExists("representation/data/Victory.png") && sos::FileExists("representation/data/BlueStyle.ttf");
+        return sos::FileExists(s::spritesPNG) && sos::FileExists(s::menuPNG)
+               && sos::FileExists(s::pausedPNG) && sos::FileExists(s::gameOverJPG)
+               && sos::FileExists(s::victoryPNG) && sos::FileExists(s::fontTTF);
     }
 
     Game::Game()  {

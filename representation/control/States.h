@@ -20,6 +20,14 @@
  * Namespace for the control using States
  */
 namespace s {
+
+    static const std::string spritesPNG{"representation/data/Sprites.png"};
+    static const std::string victoryPNG{"representation/data/Victory.png"};
+    static const std::string pausedPNG{"representation/data/Paused.png"};
+    static const std::string menuPNG{"representation/data/Menu.png"};
+    static const std::string gameOverJPG{"representation/data/GameOver.jpg"};
+    static const std::string fontTTF{"representation/data/BlueStyle.ttf"};
+
     class State; //Forward Declaration
 
     /**

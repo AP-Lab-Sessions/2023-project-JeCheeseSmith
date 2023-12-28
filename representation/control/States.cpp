@@ -56,7 +56,7 @@ namespace s {
     }
 
     StateManager::StateManager() {
-        if (!font.loadFromFile("representation/data/BlueStyle.ttf")) { //Load Font
+        if (!font.loadFromFile(fontTTF)) { //Load Font
             throw std::runtime_error("Couldn't load font!");
         }
     }
@@ -102,7 +102,7 @@ namespace s {
     }
 
     MenuState::MenuState(StateManager &manager): State(manager) {
-        update();
+        MenuState::update();
     }
 
     void MenuState::pressed(sf::Keyboard::Key &curr)  {
@@ -189,7 +189,7 @@ namespace s {
 
     PausedState::PausedState(StateManager &manager)
             : State(manager) {
-        update();
+        PausedState::update();
     }
 
     void PausedState::pressed(sf::Keyboard::Key &curr)  {
@@ -206,13 +206,13 @@ namespace s {
     }
 
     void PausedState::update() {
-        loadScreen("representation/data/Paused.png"); //Create Pause Menu
+        loadScreen(pausedPNG); //Create Pause Menu
         loadText("Press Esc to go to Menu\n Press any other key to return to game"); //Display some text
     }
 
     VictoryState::VictoryState(StateManager &manager)
             : State(manager) {
-        update();
+        VictoryState::update();
     }
 
     void VictoryState::pressed(sf::Keyboard::Key &curr)  {
@@ -223,13 +223,13 @@ namespace s {
     }
 
     void VictoryState::update() {
-        loadScreen("representation/data/Victory.png"); //Window.load Victory Menu
+        loadScreen(victoryPNG); //Window.load Victory Menu
     }
 
     GameOverState::GameOverState(StateManager &manager)
             : State(manager) {
         s::Singleton<obs::Score>::get()->exporter(); //Score may only be exported on game Ending
-        loadScreen("representation/data/GameOver.jpg"); //Load GameOver Screen
+        loadScreen(gameOverJPG); //Load GameOver Screen
     }
 
     void GameOverState::pressed(sf::Keyboard::Key &curr)  {
@@ -237,11 +237,11 @@ namespace s {
             manager.setHearts(3); //Reset lives
             manager.setDifficulty(0); //Reset diff
             manager.pop(2); //Pop the failed level & itself
-            loadScreen("representation/data/Menu.png"); //Load Menu
+            loadScreen(menuPNG); //Load Menu
         }
     }
 
     void GameOverState::update() {
-        loadScreen("representation/data/Menu.png"); //Load Menu
+        loadScreen(menuPNG); //Load Menu
     }
 }
