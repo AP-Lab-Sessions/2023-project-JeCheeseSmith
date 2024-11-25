@@ -78,8 +78,3 @@ everywhere inheritance was used (EntityView, EntityModel, Observer, ...).
 - Implementation of an additional GameOver State
 - I tried writing my documentation as complete as possible and generated it with Doxygen. (See docs/html/*)
 - No use of explicit casting
-
-### License
-    The project is written and provided by Kars van Velzen. The SFM Library was used (and therefor not written by Kars van Velzen) which licenses can be found on: https://github.com/SFML/SFML. 
-    3 Files with minor modifications have been used from the course: Project Software Engineering (INFORMAT 1001WETISE), given by prof. Serge Demeyer. Their licenses can be found on: https://github.com/sergedemeyer/TicTacToe_Git
-    Used Files: DesignByContract.h , helper.h , helper.cpp. These files were provided by prof. Serge Demeyer and modified by Kars van Velzen.
