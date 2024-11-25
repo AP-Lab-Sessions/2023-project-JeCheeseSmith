@@ -1,5 +1,5 @@
 # APMan - README
-> Variant on the popular game Pacman. A project for the course Advanced Programming (INFORMAT 1500WETAPR)
+> Variant on the popular game Pacman. A project for the course [Advanced Programming](https://www.uantwerpen.be/nl/studeren/aanbod/alle-opleidingen/informatica-studeren/bachelor/studieprogramma/) (INFORMAT 1500WETAPR)
 > > By Kars van Velzen, s20223956
 
 ### How to start?
